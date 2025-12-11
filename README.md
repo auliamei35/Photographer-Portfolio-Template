@@ -38,11 +38,11 @@ alexander-photography/
 🚀 Installation & Setup
 This template is a static website (HTML/CSS/JS), so setup is extremely simple:
 1. Clone or Download the Repository
-git clone 
+git clone [(https://github.com/auliamei35/Photographer-Portfolio-Template.git)]
 cd alexander-photography
-2. Add Your Images
+3. Add Your Images
 Place all your portfolio images inside the images/ folder and match the filenames referenced in index.html.
-3. Run the Website
+4. Run the Website
 Simply open index.html in your browser.
 No server required.
 
