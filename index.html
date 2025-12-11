@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALEXANDER | Editorial Photography</title>
+    <meta name="description" content="Premium editorial and portrait photography portfolio.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            dark: '#121212',
+                            gray: '#262626',
+                            light: '#e5e5e5',
+                            white: '#ffffff',
+                            accent: '#3b82f6', // Subtle neon blue accent
+                        }
+                    },
+                    letterSpacing: {
+                        tighter: '-0.05em',
+                        tight: '-0.025em',
+                        widest: '0.15em',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="antialiased selection:bg-brand-white selection:text-brand-black">
+
+    <div id="loader">
+        <div class="h-1 w-24 bg-brand-gray overflow-hidden rounded-full">
+            <div class="h-full bg-brand-white w-0 transition-all duration-1000 ease-out" id="loader-bar"></div>
+        </div>
+    </div>
+
+    <header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent bg-brand-black/0 backdrop-blur-none">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="font-serif text-2xl tracking-tighter text-brand-white uppercase z-50 relative group">
+                Alex<span class="text-brand-gray group-hover:text-brand-accent transition-colors duration-300">ander</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#home" class="nav-link text-sm uppercase tracking-widest text-brand-light/70 hover:text-brand-white transition-colors">Home</a>
+                <a href="#work" class="nav-link text-sm uppercase tracking-widest text-brand-light/70 hover:text-brand-white transition-colors">Work</a>
+                <a href="#about" class="nav-link text-sm uppercase tracking-widest text-brand-light/70 hover:text-brand-white transition-colors">About</a>
+                <a href="#contact" class="nav-link text-sm uppercase tracking-widest text-brand-light/70 hover:text-brand-white transition-colors">Contact</a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden z-50 text-brand-white focus:outline-none" aria-label="Toggle menu">
+                <iconify-icon icon="lucide:menu" width="24" height="24" stroke-width="1.5"></iconify-icon>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-brand-black z-40 flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]">
+            <a href="#home" class="mobile-link text-3xl font-serif text-brand-white hover:text-brand-accent transition-colors">Home</a>
+            <a href="#work" class="mobile-link text-3xl font-serif text-brand-white hover:text-brand-accent transition-colors">Work</a>
+            <a href="#about" class="mobile-link text-3xl font-serif text-brand-white hover:text-brand-accent transition-colors">About</a>
+            <a href="#contact" class="mobile-link text-3xl font-serif text-brand-white hover:text-brand-accent transition-colors">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+            <div id="hero-bg" class="absolute inset-0 z-0">
+                <img src="images/hero-bg.jpeg" 
+                     alt="Cinematic Landscape" 
+                     class="w-full h-full object-cover opacity-60 scale-110 transition-transform duration-[0ms]" 
+                     style="will-change: transform;">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent"></div>
+            </div>
+
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <p class="text-brand-accent text-xs font-semibold tracking-widest uppercase mb-4 reveal">Portfolio</p>
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tighter text-brand-white mb-6 reveal transition-delay-100">
+                    <span id="typewriter"></span><span class="cursor-blink">|</span>
+                </h1>
+                <p class="text-brand-light/80 text-sm md:text-base max-w-lg mx-auto leading-relaxed reveal transition-delay-200">
+                    Capturing moments through a lens of elegance and raw emotion.
+                </p>
+            </div>
+
+            <a href="#work" class="absolute bottom-10 left-1/2 -translate-x-1/2 text-brand-white/50 animate-bounce flex flex-col items-center gap-2 group cursor-pointer hover:text-brand-white transition-colors">
+                <span class="text-[10px] tracking-widest uppercase">Explore</span>
+                <iconify-icon icon="lucide:arrow-down" width="20" stroke-width="1.5"></iconify-icon>
+            </a>
+        </section>
+
+        <section id="work" class="py-24 md:py-32 bg-brand-black relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal">
+                    <div>
+                        <h2 class="font-serif text-4xl md:text-5xl text-brand-white tracking-tight mb-2">Selected Works</h2>
+                        <div class="h-0.5 w-12 bg-brand-accent"></div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 text-xs tracking-widest uppercase text-brand-light/60">
+                        <button class="text-brand-white border-b border-brand-white pb-0.5">All</button>
+                        <button class="hover:text-brand-white transition-colors">Editorial</button>
+                        <button class="hover:text-brand-white transition-colors">Portrait</button>
+                        <button class="hover:text-brand-white transition-colors">Landscape</button>
+                    </div>
+                </div>
+
+                <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                    
+                    <div class="group relative overflow-hidden cursor-zoom-in reveal gallery-item break-inside-avoid" 
+                         data-src="images/gallery-1.jpeg"
+                         data-title="Neon Solitude" 
+                         data-category="Portrait">
+                        <img src="images/gallery-1.jpeg" 
+                             alt="Portrait" 
+                             class="w-full h-auto grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                            <span class="text-brand-accent text-xs tracking-widest uppercase translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Portrait</span>
+                            <h3 class="font-serif text-xl text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">Neon Solitude</h3>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden cursor-zoom-in reveal gallery-item break-inside-avoid" 
+                         data-src="images/gallery-2.jpeg"
+                         data-title="Urban Geometry" 
+                         data-category="Architecture">
+                        <img src="images/gallery-2.jpeg" 
+                             alt="Architecture" 
+                             class="w-full h-auto grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                            <span class="text-brand-accent text-xs tracking-widest uppercase translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Architecture</span>
+                            <h3 class="font-serif text-xl text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">Urban Geometry</h3>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden cursor-zoom-in reveal gallery-item break-inside-avoid" 
+                         data-src="images/gallery-3.jpeg"
+                         data-title="Silk & Shadow" 
+                         data-category="Fashion">
+                        <img src="images/gallery-3.jpeg" 
+                             alt="Fashion" 
+                             class="w-full h-auto grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                            <span class="text-brand-accent text-xs tracking-widest uppercase translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Fashion</span>
+                            <h3 class="font-serif text-xl text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">Silk & Shadow</h3>
+                        </div>
+                    </div>
+
+                     <div class="group relative overflow-hidden cursor-zoom-in reveal gallery-item break-inside-avoid" 
+                     data-src="images/gallery-4.jpeg"
+                     data-title="Silent Mist" 
+                     data-category="Landscape">
+                    <img src="images/gallery-4.jpeg" 
+                         alt="Nature" 
+                         class="w-full h-auto grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <span class="text-brand-accent text-xs tracking-widest uppercase translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Landscape</span>
+                        <h3 class="font-serif text-xl text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">Silent Mist</h3>
+                    </div>
+                </div>
+
+                    <div class="group relative overflow-hidden cursor-zoom-in reveal gallery-item break-inside-avoid" 
+                         data-src="images/gallery-5.jpeg"
+                         data-title="Golden Hour" 
+                         data-category="Editorial">
+                        <img src="images/gallery-5.jpeg" 
+                             alt="Editorial" 
+                             class="w-full h-auto grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                            <span class="text-brand-accent text-xs tracking-widest uppercase translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Editorial</span>
+                            <h3 class="font-serif text-xl text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">Golden Hour</h3>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden cursor-zoom-in reveal gallery-item break-inside-avoid" 
+                         data-src="images/gallery-6.jpeg"
+                         data-title="Noir Series" 
+                         data-category="B&W">
+                        <img src="images/gallery-6.jpeg" 
+                             alt="B&W" 
+                             class="w-full h-auto grayscale group-hover:scale-105 transition-all duration-700 ease-out">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                            <span class="text-brand-accent text-xs tracking-widest uppercase translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Fine Art</span>
+                            <h3 class="font-serif text-xl text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">Noir Series</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center reveal">
+                    <button class="px-8 py-3 border border-brand-gray text-xs uppercase tracking-widest text-brand-white hover:bg-brand-white hover:text-brand-black transition-all duration-300">
+                        View Complete Archive
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 md:py-32 bg-brand-dark">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    
+                    <div class="relative reveal order-2 md:order-1">
+                        <div class="relative overflow-hidden aspect-[3/4]">
+                            <img src="images/profile.jpeg" 
+                                 alt="Photographer Profile" 
+                                 class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-700">
+                            <div class="absolute -bottom-6 -right-6 w-24 h-24 border border-brand-gray/50 -z-10 hidden md:block"></div>
+                            <div class="absolute -top-6 -left-6 w-24 h-24 border border-brand-accent/30 -z-10 hidden md:block"></div>
+                        </div>
+                    </div>
+
+                    <div class="reveal order-1 md:order-2">
+                        <span class="text-brand-accent text-xs tracking-widest uppercase mb-4 block">About Me</span>
+                        <h2 class="font-serif text-4xl md:text-5xl text-brand-white tracking-tight mb-8">
+                            Visual storyteller seeking the extraordinary in the mundane.
+                        </h2>
+                        <div class="space-y-6 text-brand-light/70 font-light leading-relaxed">
+                            <p>
+                                I am Alexander, a photographer based in New York City with over a decade of experience in editorial and portrait photography. My work is driven by a deep curiosity about the human condition and the environments we inhabit.
+                            </p>
+                            <p>
+                                Featured in Vogue, Kinfolk, and Cereal Magazine, I specialize in creating imagery that feels timeless yet distinctly modern. I believe that every frame should evoke a feeling, not just capture a scene.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-10 grid grid-cols-2 gap-6 border-t border-brand-gray pt-8">
+                            <div>
+                                <h4 class="text-2xl text-brand-white font-serif">10+</h4>
+                                <p class="text-xs uppercase tracking-wider text-brand-light/50 mt-1">Years Experience</p>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl text-brand-white font-serif">50+</h4>
+                                <p class="text-xs uppercase tracking-wider text-brand-light/50 mt-1">Magazine Features</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 md:py-32 bg-brand-black">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="font-serif text-4xl md:text-5xl text-brand-white tracking-tight mb-4">Book a Session</h2>
+                    <p class="text-brand-light/60">Available for commissions worldwide.</p>
+                </div>
+
+                <form id="contact-form" class="space-y-8 reveal">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="group relative">
+                            <input type="text" id="name" name="name" required
+                                   class="w-full bg-transparent border-b border-brand-gray py-4 text-brand-white outline-none focus:border-brand-accent transition-colors placeholder-transparent peer">
+                            <label for="name" class="absolute left-0 top-0 text-brand-light/50 text-sm transform -translate-y-9 peer-placeholder-shown:-translate-y-3 peer-placeholder-shown:text-base peer-focus:-translate-y-9 peer-focus:text-xs peer-focus:text-brand-accent transition-all duration-300">Name</label>
+                        </div>
+                        <div class="group relative">
+                            <input type="email" id="email" name="email" required
+                                   class="w-full bg-transparent border-b border-brand-gray py-4 text-brand-white outline-none focus:border-brand-accent transition-colors placeholder-transparent peer">
+                            <label for="email" class="absolute left-0 top-0 text-brand-light/50 text-sm transform -translate-y-9 peer-placeholder-shown:-translate-y-3 peer-placeholder-shown:text-base peer-focus:-translate-y-9 peer-focus:text-xs peer-focus:text-brand-accent transition-all duration-300">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="group relative">
+                        <input type="text" id="subject" name="subject" required
+                               class="w-full bg-transparent border-b border-brand-gray py-4 text-brand-white outline-none focus:border-brand-accent transition-colors placeholder-transparent peer">
+                        <label for="subject" class="absolute left-0 top-0 text-brand-light/50 text-sm transform -translate-y-9 peer-placeholder-shown:-translate-y-3 peer-placeholder-shown:text-base peer-focus:-translate-y-9 peer-focus:text-xs peer-focus:text-brand-accent transition-all duration-300">Subject</label>
+                    </div>
+
+                    <div class="group relative">
+                        <textarea id="message" name="message" rows="4" required
+                                  class="w-full bg-transparent border-b border-brand-gray py-4 text-brand-white outline-none focus:border-brand-accent transition-colors placeholder-transparent peer resize-none"></textarea>
+                        <label for="message" class="absolute left-0 top-0 text-brand-light/50 text-sm transform transition-all duration-300 pointer-events-none peer-focus:text-xs peer-focus:-translate-y-5 peer-focus:text-brand-accent peer-placeholder-shown:text-base peer-placeholder-shown:translate-y-6">Message</label>
+                    </div>
+
+                    <div class="pt-6">
+                        <button type="submit" class="w-full md:w-auto bg-brand-white text-brand-black px-10 py-4 text-xs font-semibold uppercase tracking-widest hover:bg-brand-accent hover:text-white transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)]">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+
+                <div id="form-success" class="hidden text-center py-10">
+                    <iconify-icon icon="lucide:check-circle" class="text-brand-accent text-5xl mb-4"></iconify-icon>
+                    <h3 class="text-2xl font-serif text-white">Message Sent</h3>
+                    <p class="text-brand-light/60 mt-2">Thank you. I will be in touch shortly.</p>
+                </div>
+
+                <div class="mt-20 pt-10 border-t border-brand-gray/30 flex flex-col md:flex-row justify-between items-center gap-6 reveal">
+                    <div class="flex gap-6">
+                        <a href="#" class="text-brand-light/50 hover:text-brand-accent transition-colors hover:scale-110 duration-300 block">
+                            <iconify-icon icon="lucide:instagram" width="20"></iconify-icon>
+                        </a>
+                        <a href="#" class="text-brand-light/50 hover:text-brand-accent transition-colors hover:scale-110 duration-300 block">
+                            <iconify-icon icon="lucide:twitter" width="20"></iconify-icon>
+                        </a>
+                        <a href="#" class="text-brand-light/50 hover:text-brand-accent transition-colors hover:scale-110 duration-300 block">
+                            <iconify-icon icon="lucide:linkedin" width="20"></iconify-icon>
+                        </a>
+                    </div>
+                    <p class="text-brand-light/30 text-xs tracking-wide">
+                        &copy; 2025 Alexander Photography.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-black/95 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-brand-white/70 hover:text-white transition-colors z-50">
+            <iconify-icon icon="lucide:x" width="32"></iconify-icon>
+        </button>
+        
+        <button id="lightbox-prev" class="absolute left-4 md:left-8 text-brand-white/50 hover:text-white transition-colors z-50 hidden md:block">
+            <iconify-icon icon="lucide:chevron-left" width="48"></iconify-icon>
+        </button>
+        
+        <button id="lightbox-next" class="absolute right-4 md:right-8 text-brand-white/50 hover:text-white transition-colors z-50 hidden md:block">
+            <iconify-icon icon="lucide:chevron-right" width="48"></iconify-icon>
+        </button>
+
+        <div class="relative max-w-6xl max-h-[90vh] flex flex-col items-center">
+            <img id="lightbox-img" src="" alt="Full view" class="max-h-[80vh] w-auto shadow-2xl">
+            <div class="mt-4 text-center">
+                <h3 id="lightbox-title" class="font-serif text-2xl text-white tracking-wide"></h3>
+                <span id="lightbox-cat" class="text-brand-accent text-xs uppercase tracking-widest mt-1 block"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
